@@ -1,0 +1,37 @@
+const input = 'What A Wonderful Day It is To Code';
+// const input = 'turpentine and turtles'
+
+const lowerInput = input.toLowerCase();
+// console.log(lowerInput);
+
+const vowelsArr = ['a','e','i','o','u'];
+// console.log(vowelsArr);
+
+const resultArray = [];
+
+for (let i = 0; i < lowerInput.length; i++) {
+    let currentLetter = lowerInput[i];
+
+    // console.log(currentLetter);
+
+    if (currentLetter === 'e') {
+        resultArray.push(currentLetter);
+    } else if (currentLetter === 'u') {
+        resultArray.push(currentLetter);
+    };
+
+    for (let j = 0; j < vowelsArr.length; j++) {
+        const currentVowel = vowelsArr[j];
+
+        if (currentLetter === currentVowel) {
+            resultArray.push(currentLetter);
+        }
+        // console.log(currentVowel);
+        
+        
+    }
+}
+
+const whaleTalk = resultArray.join('').toUpperCase();
+
+console.log(whaleTalk);
